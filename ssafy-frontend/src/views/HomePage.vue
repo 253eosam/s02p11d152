@@ -65,3 +65,8 @@ export default {
 	},
 }
 </script>
+<style>
+  .my-5{
+    font-size: 1.5vw
+  }
+</style>
