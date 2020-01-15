@@ -28,7 +28,9 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-    <Nav></Nav>
+    <!-- 데스크탑 버전시 다른 navbar 사용 -->
+    <!-- 모바일 버전시 아래 navbar 사용 -->
+    <mobileNavbar v-if="deviceType == 'MOBILE'"></mobileNavbar>
     <v-content>
       <v-container fluid>
         <router-view />
@@ -41,15 +43,33 @@
 
 
 <script>
-import Nav from "./components/Navbar";
+import mobileNavbar from "./components/Navbar";
 
 export default {
   name: "App",
   components: {
-    Nav
+    mobileNavbar
   },
   data: () => ({
-    //
-  })
+    deviceType: ""
+  }),
+  methods: {
+    
+  },
+  mounted() {
+    window.console.log(` 마운트 실행 `);
+      window.console.log(`실행 `);
+      window.console.log(this.deviceType);
+
+      var windowWidth = $(window).width();
+      if (windowWidth < 500) {
+        this.deviceType = "MOBILE";
+      } else {
+        this.deviceType = "PC";
+      }
+
+      window.console.log(this.deviceType);
+      window.console.log(` 마운트 종료 `);
+  },
 };
 </script>
