@@ -12,7 +12,7 @@
             만들어져 있을겁니다! 모두 화이팅 하시고, 꼭 완성해서 좋은 평가 있길 바라겠습니다.</p>
         </v-flex>
         <v-flex lg8 sm8>
-          <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" />
+          <v-img :src="getImgUrl('profile.jpg')" aspect-ratio="1.5" />
         </v-flex>
       </v-layout>
 
