@@ -1,7 +1,7 @@
 <template>
   <div>
     <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
-      <div style="line-height:1.2em;" slot="text">We will find a way.<br> We always have.</div>
+      <div style="line-height:1.2em; text-align:center" slot="text">능글맞은 능글능들한 <br> 능구렁이조 파이팅</div>
     </ImgBanner>
     <v-container>
       <!-- About Me -->
