@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
-      <div style="line-height:1.2em; text-align:center" slot="text">능글맞은 능글능들한 <br> 능구렁이조 파이팅</div>
+    <ImgBanner imgSrc="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80">
+      <div style="line-height:1.2em; text-align:center; color:white" slot="text" >냥냥 천국</div>
     </ImgBanner>
     <v-container>
       <!-- About Me -->
@@ -19,7 +19,7 @@
       <!-- Portfolio -->
       <v-layout my-5>
         <v-flex xs12>
-          <h2 class="headline my-5 text-xs-center">Portfolio</h2>
+          <h2 class="headline my-5 text-xs-center" >Portfolio</h2>
           <PortfolioList></PortfolioList>
         </v-flex>
       </v-layout>
@@ -27,7 +27,7 @@
       <!-- Post -->
       <v-layout my-5>
         <v-flex xs12>
-          <h2 class="headline my-5 text-xs-center">Post</h2>
+          <h2 class="headline my-5 text-xs-center ">Post</h2>
           <PostList :column="2"></PostList>
         </v-flex>
       </v-layout>
@@ -36,7 +36,7 @@
       <!-- Github -->
       <v-layout my-5>
         <v-flex xs12>
-          <h2 class="headline my-5 text-xs-center">Project</h2>
+          <h2 class="headline my-5 text-xs-center ">Project</h2>
           <RepositoryList></RepositoryList>
         </v-flex>
       </v-layout>
@@ -51,7 +51,12 @@ import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
 
 export default {
-	name: 'HomePage',
+  name: 'HomePage',
+  data(){
+    return{
+      flag : true
+    }
+  },
 	components: {
 		ImgBanner,
 		PortfolioList,
@@ -61,12 +66,12 @@ export default {
 	methods: {
 		getImgUrl(img) {
 			return require('../assets/' + img)
-		}
+    },
 	},
 }
 </script>
 <style>
   .my-5{
-    font-size: 1.5vw
+    font-size: 1.6vw
   }
 </style>

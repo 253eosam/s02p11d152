@@ -5,7 +5,8 @@
     <v-card-title primary-title>
       <div>
         <div class="headline">{{title}}</div>
-        <span class="grey--text" v-if="true">{{body.substring(0,100)}}</span>
+        <span class="grey--text" v-if="$vuetify.breakpoint.xs"></span>
+        <span class="grey--text" v-if="!$vuetify.breakpoint.xs">{{ body.substring(0,100)}}</span>
       </div>
     </v-card-title>
   </v-card>

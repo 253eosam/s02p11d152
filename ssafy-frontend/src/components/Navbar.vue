@@ -1,53 +1,55 @@
 <template>
-  <v-app-bar app dark color="indigo darken-2">
-    <div class="d-flex align-center">
-      <v-img
-        alt="Vuetify Logo"
-        class="shrink mr-2"
-        contain
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-        transition="scale-transition"
-        width="40"
-      />
-      <v-toolbar-title>My Blog</v-toolbar-title>
-
-      <v-img
-        alt="Vuetify Name"
-        class="shrink mt-1 hidden-sm-and-down"
-        contain
-        min-width="100"
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-        width="100"
-      />
-    </div>
-
-    <v-spacer></v-spacer>
-
-    <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
-      <span class="mr-2">Latest Release</span>
-      <v-icon>mdi-open-in-new</v-icon>
-    </v-btn>
-    <template v-slot:extension>
-      <v-tabs align-with-title background-color="transparent">
-        <v-tab @click="movePageByNav(`home`)">home</v-tab>
-        <v-tab @click="movePageByNav(`post`)">post</v-tab>
-        <v-tab @click="movePageByNav(`portfolio`)">portfolio</v-tab>
-      </v-tabs>
+<v-card>
+  <v-navigation-drawer expand-on-hover color="indigo darken-2"  dark permanent app>
+    <template v-slot:prepend>
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img :src="getImgUrl(profile.img)"></v-img>
+        </v-list-item-avatar>
+        <v-list-item link two-line>
+          <v-list-item-content>
+            <v-list-item-title class="title">{{profile.name}}</v-list-item-title>
+            <v-list-item-subtitle>{{profile.email}}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-item>
     </template>
-  </v-app-bar>
+    <v-divider></v-divider>
+
+    <v-list nav dense>
+      <v-list-item v-for="item in items" :key="item.title" link @click="movePageByNav(item.title)">
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+  </v-card>
 </template>
 
 <script>
 export default {
-  name: "navbar",
-  data() {
-    return {
-      pages:["hoem","post","portfolio"]
-    };
-  },
+  name: "Navbar",
+  data: () => ({
+    items: [
+      { title: "Home", icon: "home" },
+      { title: "Post", icon: "insert_comment" },
+      { title: "Portfolio", icon: "menu_book" }
+    ],
+    profile: {
+      name: "이성준",
+      email: "dhzm2aud@naver.com",
+      img: "profile"
+    }
+  }),
   methods: {
     movePageByNav(pageName) {
       pageName = pageName.toLowerCase();
+      console.log(this.$component);
       var toPage = "";
       if (`login` == pageName) {
         toPage = `login`;
@@ -57,6 +59,9 @@ export default {
         toPage = `portfolio`;
       }
       this.$router.push(`/${toPage}`);
+    },
+    getImgUrl(img) {
+      return require(`../assets/${img}.jpg`);
     }
   }
 };
