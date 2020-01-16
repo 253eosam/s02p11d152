@@ -3,7 +3,7 @@
     <v-flex row>
       <div class="caption">{{formatedDate}}</div>
       <h2 class="color-333 headline font-weight-light">{{title}}</h2>
-      <p class="mb-1 color-666 font-weight-light subheading">{{body}}</p>
+      <p class="mb-1 color-666 font-weight-light subheading" >{{body.substring(0,100)}}</p>
     </v-flex>
   </v-layout>
 </template>
