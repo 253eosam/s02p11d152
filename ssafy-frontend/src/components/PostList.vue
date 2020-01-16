@@ -1,7 +1,7 @@
 <template>
-  <v-layout row wrap mw-700>
-    <v-flex v-for="i in posts.length > limits ? limits : posts.length" :class="'xs' + 12 / column" px-3 :key="i">
-      <Post
+  <v-layout row wrap mw-700 >
+    <v-flex v-for="i in posts.length > limits ? limits : posts.length" lg3 sm6 xs12 :key="i">
+      <Post  class="post"
               :date="posts[i - 1].created_at"
               :title="posts[i - 1].title"
               :body="posts[i - 1].body"></Post>
@@ -48,5 +48,8 @@ export default {
   .mw-700 {
     max-width: 700px;
     margin: auto;
+  }
+  .post{
+
   }
 </style>

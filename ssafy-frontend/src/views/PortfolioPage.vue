@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
-      <div style="line-height:1.2em;font-size:1.2em;" slot="text">Portfolio</div>
+    <ImgBanner imgSrc="https://images.unsplash.com/photo-1493406300581-484b937cdc41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+      <div style="line-height:1.2em;font-size:1.2em;text-align:center; color:white" slot="text">Portfolio</div>
     </ImgBanner>
     <v-container>
 
