@@ -82,7 +82,7 @@ $ firebase deploy
 
 ## Description
 
-![main](img\main.JPG)
+![main](./img/main.JPG)
 
 **Main** 
 
@@ -90,7 +90,7 @@ $ firebase deploy
 
 
 
-![mobile](img\mobile.JPG)
+![mobile](./img/mobile.JPG)
 
 **Mobile**
 
@@ -98,12 +98,12 @@ $ firebase deploy
 
 
 
-![protfolio](img\protfolio.JPG)
+![protfolio](./img/protfolio.JPG)
 
 **Portfolio**
 
 
 
-![post&repository](img\post&repository.JPG)
+![post&repository](./img/post&repository.JPG)
 
 **Post & Repository**
