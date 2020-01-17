@@ -9,6 +9,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
+import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 
@@ -17,15 +18,18 @@ Vue.use(Vuetify)
 
 new Vue({
   router,
-	store,
-	vuetify: new Vuetify({
-		iconfont: 'fa',
-		theme: {
-			primary: '#3f51b5',
-			secondary: '#b0bec5',
-			accent: '#8c9eff',
-			error: '#b71c1c'
-		}
-	}),
+  store,
+
+  vuetify: new Vuetify({
+      iconfont: 'fa',
+      theme: {
+          primary: '#3f51b5',
+          secondary: '#b0bec5',
+          accent: '#8c9eff',
+          error: '#b71c1c'
+      }
+  }),
+
+  vuetify,
   render: h => h(App)
 }).$mount('#app')

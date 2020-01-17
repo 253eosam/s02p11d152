@@ -8,12 +8,15 @@ const PORTFOLIOS = 'portfolios'
 // Setup Firebase
 // Do change to your own firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyBjQXHHQuw1V5noAgY3-ElbXodJeyV9ki4",
-	authDomain: "p0201wm1.firebaseapp.com",
-	databaseURL: "https://p0201wm1.firebaseio.com",
-	projectId: "p0201wm1",
-	storageBucket: "p0201wm1.appspot.com"
-}
+	apiKey: "AIzaSyAkvwvO6ycPiKNplDAPPgw0jj6Tkrj4idQ",
+	authDomain: "neungle-webservice.firebaseapp.com",
+	databaseURL: "https://neungle-webservice.firebaseio.com",
+	projectId: "neungle-webservice",
+	storageBucket: "neungle-webservice.appspot.com",
+	messagingSenderId: "15336700413",
+	appId: "1:15336700413:web:1f797dae3a41c292e14194",
+	measurementId: "G-NM68HJ5YER"
+  };
 firebase.initializeApp(firebaseConfig)
 
 const firestore = firebase.firestore()
