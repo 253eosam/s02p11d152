@@ -1,7 +1,6 @@
 <template>
   <v-card>
-    <v-img :src="imgSrc" height="200px">
-    </v-img>
+    <v-img :src="imgSrc" height="200px"></v-img>
     <v-card-title primary-title>
       <div>
         <div class="headline">{{title}}</div>
@@ -14,18 +13,18 @@
 
 <script>
 export default {
-	name: 'Portfolio',
-	props: {
-		date: {type: String},
-		title: {type: String},
-		body: {type: String},
-		imgSrc: {type: String},
-	},
-	data() {
-		return {
-			//
-		}
-	}
-}
+  name: "Portfolio",
+  props: {
+    date: { type: String },
+    title: { type: String },
+    body: { type: String },
+    imgSrc: { type: String }
+  },
+  data() {
+    return {
+      //
+    };
+  }
+};
 </script>
 

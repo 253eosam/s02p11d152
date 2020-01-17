@@ -42,7 +42,7 @@ export default {
   name: "mobileNavbar",
   data() {
     return {
-      pages:["hoem","post","portfolio"]
+      pages: ["hoem", "post", "portfolio"]
     };
   },
   methods: {
